@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pruebas de grid</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#128164;</text></svg>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="p-4">
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-4 p-3 bg-body-tertiary rounded-3">
+        <p class="mb-0"><a href="index.html" class="btn btn-sm btn-outline-secondary">&larr; Volver a RutaUni</a></p>
+        <p class="mb-0 text-secondary small">Redimensiona la ventana para ver c&oacute;mo responde.</p>
+    </div>
+
+
+    <h2 class="mb-3">A. Control de columnas (col-*)</h2>
+    <div class="row g-2 mb-4">
+        <div class="col-3"><div class="bg-primary text-white text-center p-3">col-3</div></div>
+        <div class="col-3"><div class="bg-primary text-white text-center p-3">col-3</div></div>
+        <div class="col-3"><div class="bg-primary text-white text-center p-3">col-3</div></div>
+        <div class="col-3"><div class="bg-primary text-white text-center p-3">col-3</div></div>
+    </div>
+
+    <h2 class="mb-3">B. Responsive: 1 → 2 → 4 columnas</h2>
+    <div class="row g-2 mb-4">
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="bg-success text-white text-center p-3">col-12 col-sm-6 col-lg-3</div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="bg-success text-white text-center p-3">col-12 col-sm-6 col-lg-3</div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="bg-success text-white text-center p-3">col-12 col-sm-6 col-lg-3</div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div class="bg-success text-white text-center p-3">col-12 col-sm-6 col-lg-3</div>
+        </div>
+    </div>
+
+    <h2 class="mb-3">C. Anchos fijos con auto (offset)</h2>
+    <div class="row g-2 mb-4">
+        <div class="col-8 offset-2">
+            <div class="bg-warning text-dark text-center p-3">col-8 offset-2 (centrada)</div>
+        </div>
+    </div>
+
+    <h2 class="mb-3">D. Gutters: separaciones entre columnas</h2>
+    <div class="row g-0 mb-4">
+        <div class="col-6"><div class="bg-info p-3">g-0 (sin espacio)</div></div>
+        <div class="col-6"><div class="bg-info p-3">g-0 (sin espacio)</div></div>
+    </div>
+    <div class="row g-5">
+        <div class="col-6"><div class="bg-dark text-white p-3">g-5 (mucho espacio)</div></div>
+        <div class="col-6"><div class="bg-dark text-white p-3">g-5 (mucho espacio)</div></div>
+    </div>
+
+    <h2 class="mb-3">E. Alineación vertical (align-items-*)</h2>
+    <div class="row align-items-center g-2 mb-4" style="min-height: 140px;">
+        <div class="col-4"><div class="bg-secondary text-white text-center p-3">align-items-center</div></div>
+        <div class="col-4"><div class="bg-secondary text-white text-center p-5">Más alto</div></div>
+        <div class="col-4"><div class="bg-secondary text-white text-center p-3">centrados ↕</div></div>
+    </div>
+
+    <h2 class="mb-3">F. Orden (order-*)</h2>
+    <div class="row g-2">
+        <div class="col-4 order-3"><div class="bg-danger text-white text-center p-3">Primero en el HTML, order-3</div></div>
+        <div class="col-4 order-1"><div class="bg-danger text-white text-center p-3">Segundo en el HTML, order-1</div></div>
+        <div class="col-4 order-2"><div class="bg-danger text-white text-center p-3">Tercero en el HTML, order-2</div></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tutoriales de Bootstrap 5.3.8 · elige tu versión</title>
+<meta name="description" content="Dos tutoriales en español de Bootstrap 5.3.8 con proyectos completos: PixelCrew (club de videojuegos) y RutaUni (preuniversitario).">
+<meta name="theme-color" content="#7c4dff">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#128640;</text></svg>">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<style>
+    body {
+        background:
+            radial-gradient(circle at 10% 0%, rgba(124, 77, 255, .16), transparent 45%),
+            radial-gradient(circle at 90% 5%, rgba(13, 139, 217, .16), transparent 40%),
+            var(--bs-body-bg);
+        min-height: 100vh;
+    }
+
+    .tarjeta {
+        height: 100%;
+        transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+
+    .tarjeta:hover,
+    .tarjeta:focus-within {
+        transform: translateY(-4px);
+        box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, .14);
+    }
+
+    .insignia {
+        display: grid;
+        place-items: center;
+        width: 3.25rem;
+        height: 3.25rem;
+        border-radius: .9rem;
+        font-size: 1.5rem;
+        color: #fff;
+    }
+
+    .recomendado {
+        border: 2px solid var(--bs-primary);
+    }
+
+    .tabla-resumen td, .tabla-resumen th { vertical-align: middle; }
+    code.ruta { font-size: .8rem; }
+</style>
+</head>
+<body>
+
+<main class="container py-5">
+
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-10">
+
+            <header class="text-center mb-5">
+                <span class="badge text-bg-primary mb-3">Bootstrap 5.3.8 · dos versiones verificadas</span>
+                <h1 class="display-6 fw-bold lh-1">Tutoriales de Bootstrap 5.3.8</h1>
+                <p class="lead text-body-secondary mb-0">
+                    Elige el tuyo. Los dos duran 3 h 30 min, tienen 10 módulos, proyecto
+                    incremental y código completo.
+                </p>
+            </header>
+
+            <div class="row g-4">
+
+                <div class="col-12 col-lg-6 d-flex">
+                    <article class="card tarjeta shadow-sm border-0 recomendado">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <span class="insignia" style="background:linear-gradient(135deg,#7c4dff,#0d8bd9)">
+                                    <i class="bi bi-joystick"></i>
+                                </span>
+                                <div>
+                                    <h2 class="h4 mb-0">PixelCrew <span class="badge text-bg-primary align-middle">v2</span></h2>
+                                    <small class="text-body-secondary">Club de videojuegos de colegio</small>
+                                </div>
+                            </div>
+
+                            <p class="text-body-secondary flex-grow-1">
+                                El tema engancha: un club de videojuegos. 13.600 palabras, cada
+                                ejercicio con <strong>pista y solución</strong> para que puedas
+                                autocomprobarte, y <strong>cero imágenes que descargar</strong>
+                                (funciona con internet lento de colegio).
+                            </p>
+
+                            <ul class="list-unstyled small text-body-secondary mb-3">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Recomendado para adolescentes de 13 a 17 años</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Sass solo como lectura, sin obligación de usarlo</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Modo claro/oscuro que respeta el del dispositivo</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Galería con fotos reales y <code>alt</code> bien explicado</li>
+                            </ul>
+
+                            <div class="d-flex flex-wrap gap-2 mt-auto">
+                                <a href="pixelcrew/index.html" class="btn btn-primary">
+                                    Abrir el tutorial <i class="bi bi-arrow-right ms-1"></i>
+                                </a>
+                                <a href="../pixelcrew/index.html" class="btn btn-outline-secondary">Ver el sitio</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-lg-6 d-flex">
+                    <article class="card tarjeta shadow-sm border-0">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <span class="insignia" style="background:linear-gradient(135deg,#1f3a8a,#2b1a6b)">
+                                    <i class="bi bi-mortarboard-fill"></i>
+                                </span>
+                                <div>
+                                    <h2 class="h4 mb-0">RutaUni</h2>
+                                    <small class="text-body-secondary">Preuniversitario y orientación universitaria</small>
+                                </div>
+                            </div>
+
+                            <p class="text-body-secondary flex-grow-1">
+                                Más profundo: 22.600 palabras con el <em>por qué</em> detrás de cada
+                                clase, tabla de errores por módulo, cheat sheet amplia y un
+                                proyecto con formulario validado, modal y modo oscuro robusto.
+                            </p>
+
+                            <ul class="list-unstyled small text-body-secondary mb-3">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Recomendado si ya tienes algo de base en HTML/CSS</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Accesibilidad tratada a fondo (foco, <code>aria</code>, contraste)</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Dos laboratorios de práctica (grid y tipografía)</li>
+                            </ul>
+
+                            <div class="d-flex flex-wrap gap-2 mt-auto">
+                                <a href="rutauni/index.html" class="btn btn-primary">
+                                    Abrir el tutorial <i class="bi bi-arrow-right ms-1"></i>
+                                </a>
+                                <a href="../rutouni/index.html" class="btn btn-outline-secondary">Ver el sitio</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+
+            <div class="card shadow-sm border-0 mt-4">
+                <div class="card-body p-4">
+                    <h2 class="h5 mb-3">Qué los distingue</h2>
+                    <div class="table-responsive">
+                        <table class="table table-sm tabla-resumen align-middle mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Criterio</th>
+                                    <th scope="col">PixelCrew v2</th>
+                                    <th scope="col">RutaUni</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Tema</td><td>Club de videojuegos</td><td>Preuniversitario</td></tr>
+                                <tr><td>Palabras</td><td>≈ 13.600</td><td>≈ 22.600</td></tr>
+                                <tr><td>Tiempo</td><td>210 min</td><td>210 min</td></tr>
+                                <tr><td>Soluciones de los ejercicios</td><td>Sí, plegables</td><td>Solo pistas</td></tr>
+                                <tr><td>Imágenes que descargar</td><td>Ninguna</td><td>Opcionales</td></tr>
+                                <tr><td>Respeto del tema del sistema</td><td>Sí</td><td>Sí</td></tr>
+                                <tr><td>Profundidad conceptual</td><td>Media</td><td>Alta</td></tr>
+                                <tr><td>Mejor para</td><td>Empezar de cero, engancharse</td><td>Aprofundizar y reusar</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center text-body-secondary small mt-4 mb-0">
+                Ambos tutoriales se reconstruyen desde su Markdown con
+                <code class="ruta">bash tools/build_all.sh</code>
+            </p>
+
+        </div>
+    </div>
+
+</main>
+
+</body>
+</html>

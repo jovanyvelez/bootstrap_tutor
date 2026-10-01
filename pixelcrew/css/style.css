@@ -1,0 +1,116 @@
+/* ===== 1. Variables: personalizamos Bootstrap sin tocar sus archivos ===== */
+:root {
+  --pc-accent: #7c4dff;
+
+  /* Variables de Bootstrap que sobrescribimos */
+  --bs-primary: #7c4dff;
+  --bs-primary-rgb: 124, 77, 255;
+  --bs-primary-text-emphasis: #4a22b8;
+  --bs-primary-bg-subtle: #e9e0ff;
+  --bs-primary-border-subtle: #cbb8ff;
+  --bs-border-radius: 0.75rem;
+}
+
+/* Este bloque va DESPUÉS de :root para ganar en modo oscuro */
+[data-bs-theme="dark"] {
+  --bs-body-bg: #0e0f1f;
+  --bs-body-bg-rgb: 14, 15, 31;
+  --bs-tertiary-bg: #161833;
+  --bs-tertiary-bg-rgb: 22, 24, 51;
+  --bs-primary-text-emphasis: #b8a0ff;
+  --bs-primary-bg-subtle: #241a4d;
+  --bs-primary-border-subtle: #4a2fa8;
+}
+
+/* Los componentes de Bootstrap guardan sus colores en variables LOCALES.
+   Las cambiamos para que los botones también usen nuestro morado. */
+.btn-primary {
+  --bs-btn-bg: var(--pc-accent);
+  --bs-btn-border-color: var(--pc-accent);
+  --bs-btn-hover-bg: #6a3de8;
+  --bs-btn-hover-border-color: #6a3de8;
+  --bs-btn-active-bg: #5a30d0;
+  --bs-btn-active-border-color: #5a30d0;
+  --bs-btn-disabled-bg: var(--pc-accent);
+  --bs-btn-disabled-border-color: var(--pc-accent);
+  --bs-btn-focus-shadow-rgb: 124, 77, 255;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--bs-primary-text-emphasis);
+  --bs-btn-border-color: var(--pc-accent);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--pc-accent);
+  --bs-btn-hover-border-color: var(--pc-accent);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #5a30d0;
+  --bs-btn-active-border-color: #5a30d0;
+  --bs-btn-focus-shadow-rgb: 124, 77, 255;
+}
+
+.card {
+  --bs-card-bg: var(--bs-tertiary-bg);
+}
+
+/* ===== 2. Ajustes generales ===== */
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+/* Evita que la navbar fija tape los títulos al navegar por el menú */
+section[id] { scroll-margin-top: 4.5rem; }
+
+/* Un texto muy largo (un correo, una URL) puede empujar la página y crear
+   scroll horizontal en celular. `overflow-wrap: anywhere` lo parte.
+   Ojo: `anywhere`, no `break-word`, porque es el único que además reduce el
+   ancho mínimo de las celdas de un grid. */
+body {
+  overflow-wrap: anywhere;
+}
+
+/* ===== 3. Hero ===== */
+.hero {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(124, 77, 255, 0.25), transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(13, 139, 217, 0.18), transparent 45%);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #7c4dff, #0d8bd9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-card {
+  background: linear-gradient(135deg, #7c4dff, #0d8bd9);
+}
+
+/* ===== 4. Tarjetas ===== */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.25) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-hover { transition: none; }
+  .card-hover:hover { transform: none; }
+}
+
+/* ===== 5. Carrusel de la comunidad ===== */
+.testimonio {
+  min-height: 280px;
+  background: linear-gradient(135deg, #4b2bb5, #0b6fa8);
+}
+
+/* En modo oscuro Bootstrap pone controles negros en los carruseles.
+   Como nuestras diapositivas son oscuras en ambos modos, los forzamos a blanco. */
+.carousel {
+  --bs-carousel-indicator-active-bg: #fff;
+  --bs-carousel-caption-color: #fff;
+  --bs-carousel-control-icon-filter: none;
+}
